@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1770827317219,
+      "tag": "0000_awesome_thanos",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1770827406596,
+      "tag": "0001_melodic_bedlam",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1770829118030,
+      "tag": "0002_material_justice",
+      "breakpoints": true
+    }
+  ]
+}

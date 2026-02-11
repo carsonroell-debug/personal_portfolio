@@ -1,0 +1,63 @@
+# Project TODO
+
+- [x] Fix Home.tsx to import useAuth hook properly
+- [x] Create contact form component with name, email, and message fields
+- [x] Add contact form submission database table
+- [x] Create tRPC procedure to handle contact form submissions
+- [x] Implement email notification when form is submitted
+- [x] Integrate contact form into Home page
+- [x] Test contact form submission and email delivery
+- [x] Update hero section with product-first positioning headline and subheadline
+- [x] Add primary CTA "Explore the Tools" and secondary CTA "Work With Me" to hero
+- [x] Create new Products section with card grid layout
+- [x] Add UTM Link Generator product card
+- [x] Add JobUpdate product card
+- [x] Create "Work With Me" section above contact form
+- [x] Reposition contact form below "Work With Me" section
+- [x] Remove old agency-style content (services, process sections)
+- [x] Add "Free Marketing Utility" badge to UTM Link Generator card
+- [x] Add "Early Access Project" badge to JobUpdate card
+- [x] Create new "Building in Public" section below Products
+- [x] Add "Internal Tools for Small Teams" upcoming project card
+- [x] Add "AI-Assisted Micro SaaS Experiments" upcoming project card
+- [x] Add "More Utilities for Marketers & Builders" upcoming project card
+- [x] Add "More tools launching soon" tagline to Building in Public section
+- [x] Create newsletter subscribers database table
+- [x] Add newsletter signup form to Building in Public section
+- [x] Create tRPC procedure for newsletter subscription with email notifications
+- [x] Add "Recent Launches" ticker to hero section
+- [x] Style newsletter form with neo-brutalist design
+- [x] Create UTM Link Generator product page component
+- [x] Add hero section with title and subtitle
+- [x] Add problem section explaining manual UTM link issues
+- [x] Add "Who It's For" section with target audience list
+- [x] Add "Use Cases" section with example scenarios
+- [x] Add "How It Works" section with 3-step process
+- [x] Add final CTA section with button and newsletter prompt
+- [x] Register route in App.tsx for /utm-generator page
+- [x] Update homepage product card to link to new product page
+- [x] Create JobUpdate product page component
+- [x] Add hero section with early access positioning
+- [x] Add problem section explaining contractor communication pain
+- [x] Add "Who It's For" section targeting service businesses
+- [x] Add "How It Works" section with simple workflow
+- [x] Add "Early Access" section explaining current status
+- [x] Add final CTA with "Join Early Access" button
+- [x] Register route in App.tsx for /jobupdate page
+- [x] Update homepage JobUpdate card to link to product page
+- [x] Create admin dashboard page component at /admin route
+- [x] Add tRPC procedures to fetch newsletter subscribers
+- [x] Add tRPC procedures to fetch contact form submissions
+- [x] Create newsletter subscribers table with email and date columns
+- [x] Create contact submissions table with name, email, message, and date columns
+- [x] Add date filtering functionality for both tables
+- [x] Add CSV export button for newsletter subscribers
+- [x] Add CSV export button for contact submissions
+- [x] Register /admin route in App.tsx
+- [x] Style admin dashboard with minimal, consistent design
+- [x] Generate contractor dashboard mockup image
+- [x] Generate client view mockup image
+- [x] Generate messages/timeline mockup image
+- [x] Add mockups section to JobUpdate product page between "How It Works" and final CTA
+- [x] Upload mockup images to S3 and use CDN URLs
+- [x] Style mockups section with neo-brutalist design
