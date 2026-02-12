@@ -42,7 +42,7 @@ export default function Home() {
                 </div>
                 
                 <div className="font-mono text-sm text-muted-foreground">
-                  <span className="text-[var(--lime)] font-semibold">Recent launches:</span> UTM Link Generator • JobUpdate (Early Access)
+                  <span className="text-[var(--lime)] font-semibold">Recent launches:</span> UTM Link Generator • Linklytics • JobUpdate (Early Access)
                 </div>
               </div>
               
@@ -105,7 +105,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Product 1: UTM Link Generator */}
             <div className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
               <div className="space-y-4">
@@ -135,7 +135,43 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Product 2: JobUpdate */}
+            {/* Product 2: Linklytics */}
+            <div className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none overflow-hidden">
+              <a href="https://linklytics-mu.vercel.app/" target="_blank" rel="noopener noreferrer" className="block -mx-8 -mt-8 mb-4">
+                <img
+                  src="/linklytics-screenshot.png"
+                  alt="Linklytics landing page - smart link shortener with powerful analytics"
+                  className="w-full aspect-video object-cover border-b-4 border-white"
+                />
+              </a>
+              <div className="space-y-4">
+                <div className="flex gap-2 flex-wrap">
+                  <div className="inline-block brutalist-border bg-[var(--lime)] px-4 py-2">
+                    <span className="font-mono text-sm font-black text-black">LIVE</span>
+                  </div>
+                  <div className="inline-block brutalist-border bg-muted px-4 py-2">
+                    <span className="font-mono text-sm font-semibold text-muted-foreground">Link Analytics</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-3xl font-black">Linklytics</h3>
+                
+                <p className="font-mono text-muted-foreground">
+                  A professional link analytics and management platform with real-time click tracking, OAuth, and custom dashboards.
+                </p>
+              </div>
+
+              <Button 
+                className="brutalist-border bg-foreground text-background hover:bg-[var(--lime)] hover:text-black font-mono font-semibold w-full transition-all"
+                asChild
+              >
+                <a href="https://linklytics-mu.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </Button>
+            </div>
+
+            {/* Product 3: JobUpdate */}
             <div className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
               <div className="space-y-4">
                 <div className="flex gap-2 flex-wrap">
