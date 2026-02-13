@@ -7,12 +7,16 @@
  * Positioning: Product portfolio for solo indie builder shipping micro-SaaS tools
  */
 
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ArrowDown, Wrench, Rocket } from "lucide-react";
+import { ArrowDown, Wrench, Rocket } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { LinklyticsCaseStudy } from "@/components/LinklyticsCaseStudy";
 
 export default function Home() {
+  const [linklyticsModalOpen, setLinklyticsModalOpen] = useState(false);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -86,6 +90,7 @@ export default function Home() {
                   src="https://private-us-east-1.manuscdn.com/sessionFile/fVUFuNLXvrYwJDOXRAbWxS/sandbox/ZW22vjidqX1VpSA7XdJHMP-img-1_1770817329000_na1fn_aGVyby1hYnN0cmFjdC1idWlsZGVy.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZlZVRnVOTFh2cll3SkRPWFJBYld4Uy9zYW5kYm94L1pXMjJ2amlkcVgxVnBTQTdYZEpITVAtaW1nLTFfMTc3MDgxNzMyOTAwMF9uYTFmbl9hR1Z5YnkxaFluTjBjbUZqZEMxaWRXbHNaR1Z5LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=cNw4WMKiJY5rfxLd8nb-O1iEUa7TuKeN-KWy8Px4xVWT3XkfqkuWAu0~DoL6ko6exHAd1sVLfQHlKyeIzYsW6dqjTkiHcmjeFJ9CKHzmd65xrn1towHKIr~h4DqHPwrHCdbYHm6cUK1HMuyPUMFGwnlHHr6UX5MaDmwPeAFYF4iztaZH1u~4t0sgnSLo44-Hv6SIDsqdVbyNxfkyzMMrcirijvfEviquMJPtNMYbAY57BxNz7U0xC3lbmh4r~Kj5BYfBXl418yAqMRPy7~eIWM6gqpUOk4UOK4VYsPV77m7OzZ1jf3Aa13ccw8VAxhrSyKkOFvUYPHSLj5N1LAqcKQ__"
                   alt="Abstract builder visual"
                   className="w-full h-full object-contain"
+                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -136,16 +141,31 @@ export default function Home() {
             </div>
 
             {/* Product 2: Linklytics */}
-            <div className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none overflow-hidden">
-              <a href="https://linklytics-mu.vercel.app/" target="_blank" rel="noopener noreferrer" className="block -mx-8 -mt-8 mb-4">
+            <motion.div
+              role="button"
+              tabIndex={0}
+              onClick={() => setLinklyticsModalOpen(true)}
+              onKeyDown={(e) => e.key === "Enter" && setLinklyticsModalOpen(true)}
+              className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lime)] focus-visible:ring-offset-2 dark:border-border"
+              whileTap={{ scale: 0.99 }}
+            >
+              <div className="block -mx-8 -mt-8 mb-4 overflow-hidden">
                 <img
                   src="/linklytics-screenshot.png"
                   alt="Linklytics landing page - smart link shortener with powerful analytics"
-                  className="w-full aspect-video object-cover border-b-4 border-white"
+                  className="w-full aspect-video object-cover border-b-4 border-border dark:border-border"
+                  loading="lazy"
                 />
-              </a>
+              </div>
               <div className="space-y-4">
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap items-center">
+                  <div className="flex items-center gap-2" aria-label="Live Now">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                    </span>
+                    <span className="font-mono text-xs font-semibold text-emerald-700 dark:text-emerald-400">Live Now</span>
+                  </div>
                   <div className="inline-block brutalist-border bg-[var(--lime)] px-4 py-2">
                     <span className="font-mono text-sm font-black text-black">LIVE</span>
                   </div>
@@ -154,22 +174,25 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <h3 className="text-3xl font-black">Linklytics</h3>
+                <h3 className="text-3xl font-black text-foreground">Linklytics</h3>
                 
-                <p className="font-mono text-muted-foreground">
+                <p className="font-mono text-muted-foreground leading-relaxed">
                   A professional link analytics and management platform with real-time click tracking, OAuth, and custom dashboards.
                 </p>
               </div>
 
               <Button 
                 className="brutalist-border bg-foreground text-background hover:bg-[var(--lime)] hover:text-black font-mono font-semibold w-full transition-all"
-                asChild
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLinklyticsModalOpen(true);
+                }}
               >
-                <a href="https://linklytics-mu.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  View Project
-                </a>
+                View Case Study
               </Button>
-            </div>
+            </motion.div>
+
+            <LinklyticsCaseStudy open={linklyticsModalOpen} onOpenChange={setLinklyticsModalOpen} />
 
             {/* Product 3: JobUpdate */}
             <div className="brutalist-border brutalist-shadow-lime bg-card p-8 space-y-6 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
@@ -298,6 +321,7 @@ export default function Home() {
             src="https://private-us-east-1.manuscdn.com/sessionFile/fVUFuNLXvrYwJDOXRAbWxS/sandbox/ZW22vjidqX1VpSA7XdJHMP-img-3_1770817329000_na1fn_Y29kZS10ZXJtaW5hbC1hYnN0cmFjdA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZlZVRnVOTFh2cll3SkRPWFJBYld4Uy9zYW5kYm94L1pXMjJ2amlkcVgxVnBTQTdYZEpITVAtaW1nLTNfMTc3MDgxNzMyOTAwMF9uYTFmbl9ZMjlrWlMxMFpYSnRhVzVoYkMxaFluTjBjbUZqZEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=cNw4WMKiJY5rfxLd8nb-O1iEUa7TuKeN-KWy8Px4xVWT3XkfqkuWAu0~DoL6ko6exHAd1sVLfQHlKyeIzYsW6dqjTkiHcmjeFJ9CKHzmd65xrn1towHKIr~h4DqHPwrHCdbYHm6cUK1HMuyPUMFGwnlHHr6UX5MaDmwPeAFYF4iztaZH1u~4t0sgnSLo44-Hv6SIDsqdVbyNxfkyzMMrcirijvfEviquMJPtNMYbAY57BxNz7U0xC3lbmh4r~Kj5BYfBXl418yAqMRPy7~eIWM6gqpUOk4UOK4VYsPV77m7OzZ1jf3Aa13ccw8VAxhrSyKkOFvUYPHSLj5N1LAqcKQ__"
             alt="Code terminal abstract"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </div>
 
