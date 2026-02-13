@@ -14,6 +14,8 @@ import { ArrowDown, Wrench, Rocket } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { LinklyticsCaseStudy } from "@/components/LinklyticsCaseStudy";
+import { TechStackMarquee } from "@/components/TechStackMarquee";
+import { ContactFAB } from "@/components/ContactFAB";
 
 export default function Home() {
   const [linklyticsModalOpen, setLinklyticsModalOpen] = useState(false);
@@ -24,6 +26,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ContactFAB />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Grid Background */}
@@ -96,6 +99,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <TechStackMarquee />
       </section>
 
       {/* Products Section */}

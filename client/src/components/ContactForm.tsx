@@ -7,7 +7,11 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Send, CheckCircle2 } from "lucide-react";
 
-export function ContactForm() {
+interface ContactFormProps {
+  onSuccess?: () => void;
+}
+
+export function ContactForm({ onSuccess }: ContactFormProps = {}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -17,6 +21,7 @@ export function ContactForm() {
     onSuccess: () => {
       setSubmitted(true);
       toast.success("Message sent! I'll get back to you soon.");
+      onSuccess?.();
       // Reset form after 3 seconds
       setTimeout(() => {
         setName("");
