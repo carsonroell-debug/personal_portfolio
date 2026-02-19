@@ -1,0 +1,169 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atlas Ops Board — agent-native build dashboard">
+  <defs>
+    <!-- Grid pattern -->
+    <pattern id="ops-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+    <!-- Bottom fade -->
+    <linearGradient id="fade-bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="600" height="600" fill="#0a0a0a"/>
+  <rect width="600" height="600" fill="url(#ops-grid)"/>
+
+  <!-- Top lime accent -->
+  <rect x="0" y="0" width="600" height="3" fill="#d4ff00"/>
+
+  <!-- ── HEADER ── -->
+  <rect x="16" y="16" width="568" height="72" fill="#101010" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Left lime stripe -->
+  <rect x="16" y="16" width="3" height="72" fill="#d4ff00"/>
+
+  <!-- Title -->
+  <text x="32" y="46" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="17" font-weight="700" fill="#d4ff00" letter-spacing="1">ATLAS OPS BOARD</text>
+
+  <!-- Live indicator dot -->
+  <circle cx="237" cy="40" r="4" fill="#10b981"/>
+  <circle cx="237" cy="40" r="7" fill="none" stroke="#10b981" stroke-width="1" opacity="0.35"/>
+
+  <!-- Subtext -->
+  <text x="32" y="70" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.38)">Agent-native builds  •  nightly automation  •  PR-ready output</text>
+
+  <!-- Version tag -->
+  <rect x="498" y="28" width="72" height="18" fill="rgba(212,255,0,0.1)" stroke="#d4ff00" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="534" y="41" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8" fill="#d4ff00" text-anchor="middle">v1.4.2</text>
+
+  <!-- ── STATUS ROW ── -->
+  <rect x="16" y="96" width="568" height="36" fill="#0d0d0d" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- ATLAS: ACTIVE -->
+  <circle cx="32" cy="114" r="4" fill="#10b981"/>
+  <circle cx="32" cy="114" r="7" fill="none" stroke="#10b981" stroke-width="0.8" opacity="0.3"/>
+  <text x="45" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.7)">ATLAS: </text>
+  <text x="91" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="700" fill="#10b981">ACTIVE</text>
+
+  <!-- Separator -->
+  <line x1="166" y1="104" x2="166" y2="124" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- RUNNER: ONLINE -->
+  <circle cx="182" cy="114" r="4" fill="#10b981"/>
+  <text x="194" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.7)">RUNNER: </text>
+  <text x="249" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="700" fill="#10b981">ONLINE</text>
+
+  <!-- Separator -->
+  <line x1="330" y1="104" x2="330" y2="124" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- LAST CHECK -->
+  <circle cx="346" cy="114" r="3.5" fill="rgba(255,255,255,0.25)"/>
+  <text x="358" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.4)">LAST CHECK: </text>
+  <text x="447" y="118" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.75)">2m ago</text>
+
+  <!-- ── SECTION DIVIDER ── -->
+  <line x1="16" y1="144" x2="584" y2="144" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- ── TASK QUEUE ── -->
+  <text x="16" y="160" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8" font-weight="700" fill="rgba(255,255,255,0.3)" letter-spacing="2.5">TASK QUEUE</text>
+
+  <!-- Queue item 1 — running -->
+  <rect x="16" y="166" width="568" height="34" fill="#111111" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="16" y="166" width="3" height="34" fill="#d4ff00"/>
+  <text x="30" y="180" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8.5" fill="#d4ff00" opacity="0.6">[01]</text>
+  <text x="64" y="180" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="11" font-weight="500" fill="rgba(255,255,255,0.9)">Audit outbound links</text>
+  <!-- Progress bar -->
+  <rect x="64" y="186" width="310" height="3" fill="rgba(255,255,255,0.06)" rx="1"/>
+  <rect x="64" y="186" width="194" height="3" fill="#d4ff00" rx="1" opacity="0.7"/>
+  <text x="385" y="192" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="7.5" fill="rgba(255,255,255,0.35)">62%</text>
+  <!-- Run indicator -->
+  <text x="566" y="187" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" fill="#d4ff00" text-anchor="middle">▶</text>
+
+  <!-- Queue item 2 — queued -->
+  <rect x="16" y="202" width="568" height="34" fill="#0d0d0d" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="30" y="222" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8.5" fill="rgba(212,255,0,0.35)">[02]</text>
+  <text x="64" y="222" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="11" font-weight="500" fill="rgba(255,255,255,0.65)">Generate thumbnails</text>
+  <text x="566" y="223" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">▶</text>
+
+  <!-- Queue item 3 — queued -->
+  <rect x="16" y="238" width="568" height="34" fill="#111111" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="30" y="258" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8.5" fill="rgba(212,255,0,0.35)">[03]</text>
+  <text x="64" y="258" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="11" font-weight="500" fill="rgba(255,255,255,0.65)">Verify Vercel deployments</text>
+  <text x="566" y="259" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">▶</text>
+
+  <!-- Queue item 4 — queued -->
+  <rect x="16" y="274" width="568" height="34" fill="#0d0d0d" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="30" y="294" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8.5" fill="rgba(212,255,0,0.35)">[04]</text>
+  <text x="64" y="294" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="11" font-weight="500" fill="rgba(255,255,255,0.65)">Open PR: homepage refresh</text>
+  <text x="566" y="295" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">▶</text>
+
+  <!-- ── SECTION DIVIDER ── -->
+  <line x1="16" y1="322" x2="584" y2="322" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- ── PROJECTS ── -->
+  <text x="16" y="338" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="8" font-weight="700" fill="rgba(255,255,255,0.3)" letter-spacing="2.5">PROJECTS</text>
+
+  <!-- Tile 1 — LinkRescue -->
+  <rect x="16" y="346" width="278" height="92" fill="#101010" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="16" y="346" width="3" height="92" fill="#d4ff00"/>
+  <text x="30" y="369" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" font-weight="700" fill="#f5f5f5">LinkRescue</text>
+  <text x="30" y="387" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.4)">Link audit</text>
+  <rect x="30" y="402" width="52" height="16" fill="rgba(212,255,0,0.12)" stroke="#d4ff00" stroke-width="0.75"/>
+  <text x="56" y="413" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="7.5" fill="#d4ff00" text-anchor="middle">ACTIVE</text>
+  <!-- Mini chart bars -->
+  <rect x="218" y="396" width="6" height="22" fill="#d4ff00" opacity="0.3"/>
+  <rect x="228" y="390" width="6" height="28" fill="#d4ff00" opacity="0.5"/>
+  <rect x="238" y="384" width="6" height="34" fill="#d4ff00" opacity="0.7"/>
+  <rect x="248" y="388" width="6" height="30" fill="#d4ff00" opacity="0.55"/>
+  <rect x="258" y="394" width="6" height="24" fill="#d4ff00" opacity="0.4"/>
+  <line x1="213" y1="418" x2="270" y2="418" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <!-- Tile 2 — BigFlightDeals -->
+  <rect x="306" y="346" width="278" height="92" fill="#101010" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="306" y="346" width="3" height="92" fill="#d4ff00"/>
+  <text x="320" y="369" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" font-weight="700" fill="#f5f5f5">BigFlightDeals</text>
+  <text x="320" y="387" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.4)">Deal ingest</text>
+  <rect x="320" y="402" width="52" height="16" fill="rgba(212,255,0,0.12)" stroke="#d4ff00" stroke-width="0.75"/>
+  <text x="346" y="413" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="7.5" fill="#d4ff00" text-anchor="middle">ACTIVE</text>
+  <!-- Mini chart bars -->
+  <rect x="508" y="402" width="6" height="16" fill="#d4ff00" opacity="0.3"/>
+  <rect x="518" y="396" width="6" height="22" fill="#d4ff00" opacity="0.5"/>
+  <rect x="528" y="388" width="6" height="30" fill="#d4ff00" opacity="0.7"/>
+  <rect x="538" y="392" width="6" height="26" fill="#d4ff00" opacity="0.55"/>
+  <rect x="548" y="398" width="6" height="20" fill="#d4ff00" opacity="0.4"/>
+  <line x1="503" y1="418" x2="560" y2="418" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <!-- Tile 3 — TravelPackAI -->
+  <rect x="16" y="448" width="278" height="92" fill="#101010" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="16" y="448" width="3" height="92" fill="#d4ff00"/>
+  <text x="30" y="471" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" font-weight="700" fill="#f5f5f5">TravelPackAI</text>
+  <text x="30" y="489" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.4)">Planner v1</text>
+  <rect x="30" y="504" width="52" height="16" fill="rgba(212,255,0,0.12)" stroke="#d4ff00" stroke-width="0.75"/>
+  <text x="56" y="515" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="7.5" fill="#d4ff00" text-anchor="middle">ACTIVE</text>
+  <!-- Mini chart bars -->
+  <rect x="218" y="504" width="6" height="14" fill="#d4ff00" opacity="0.35"/>
+  <rect x="228" y="498" width="6" height="20" fill="#d4ff00" opacity="0.5"/>
+  <rect x="238" y="493" width="6" height="25" fill="#d4ff00" opacity="0.65"/>
+  <rect x="248" y="490" width="6" height="28" fill="#d4ff00" opacity="0.8"/>
+  <rect x="258" y="494" width="6" height="24" fill="#d4ff00" opacity="0.6"/>
+  <line x1="213" y1="520" x2="270" y2="520" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <!-- Tile 4 — UpdateMate -->
+  <rect x="306" y="448" width="278" height="92" fill="#101010" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="306" y="448" width="3" height="92" fill="#d4ff00"/>
+  <text x="320" y="471" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="12" font-weight="700" fill="#f5f5f5">UpdateMate</text>
+  <text x="320" y="489" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="9" fill="rgba(255,255,255,0.4)">Client updates</text>
+  <rect x="320" y="504" width="52" height="16" fill="rgba(212,255,0,0.12)" stroke="#d4ff00" stroke-width="0.75"/>
+  <text x="346" y="515" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="7.5" fill="#d4ff00" text-anchor="middle">ACTIVE</text>
+  <!-- Mini chart bars -->
+  <rect x="508" y="498" width="6" height="20" fill="#d4ff00" opacity="0.4"/>
+  <rect x="518" y="493" width="6" height="25" fill="#d4ff00" opacity="0.55"/>
+  <rect x="528" y="500" width="6" height="18" fill="#d4ff00" opacity="0.35"/>
+  <rect x="538" y="495" width="6" height="23" fill="#d4ff00" opacity="0.6"/>
+  <rect x="548" y="490" width="6" height="28" fill="#d4ff00" opacity="0.75"/>
+  <line x1="503" y1="520" x2="560" y2="520" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <!-- ── Bottom fade overlay ── -->
+  <rect x="0" y="540" width="600" height="60" fill="url(#fade-bottom)"/>
+</svg>

@@ -99,8 +99,8 @@ export default function Home() {
             <div className="relative">
               <div className="brutalist-border brutalist-shadow-lime bg-card p-8 aspect-square flex items-center justify-center">
                 <img
-                  src="https://private-us-east-1.manuscdn.com/sessionFile/fVUFuNLXvrYwJDOXRAbWxS/sandbox/ZW22vjidqX1VpSA7XdJHMP-img-1_1770817329000_na1fn_aGVyby1hYnN0cmFjdC1idWlsZGVy.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZlZVRnVOTFh2cll3SkRPWFJBYld4Uy9zYW5kYm94L1pXMjJ2amlkcVgxVnBTQTdYZEpITVAtaW1nLTFfMTc3MDgxNzMyOTAwMF9uYTFmbl9hR1Z5YnkxaFluTjBjbUZqZEMxaWRXbHNaR1Z5LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=cNw4WMKiJY5rfxLd8nb-O1iEUa7TuKeN-KWy8Px4xVWT3XkfqkuWAu0~DoL6ko6exHAd1sVLfQHlKyeIzYsW6dqjTkiHcmjeFJ9CKHzmd65xrn1towHKIr~h4DqHPwrHCdbYHm6cUK1HMuyPUMFGwnlHHr6UX5MaDmwPeAFYF4iztaZH1u~0sgnSLo44-Hv6SIDsqdVbyNxfkyzMMrcirijvfEviquMJPtNMYbAY57BxNz7U0xC3lbmh4r~Kj5BYfBXl418yAqMRPy7~eIWM6gqpUOk4UOK4VYsPV77m7OzZ1jf3Aa13ccw8VAxhrSyKkOFvUYPHSLj5N1LAqcKQ__"
-                  alt="Abstract builder visual"
+                  src="/visuals/agent-ops-board.svg"
+                  alt="Atlas Ops Board — agent-native build dashboard"
                   className="w-full h-full object-contain"
                   fetchPriority="high"
                 />
