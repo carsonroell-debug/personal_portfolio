@@ -1,0 +1,22 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0a"/>
+  <defs>
+    <pattern id="grid-bfd" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-bfd)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#d4ff00"/>
+  <!-- Airplane silhouette -->
+  <polygon points="400,140 460,210 440,210 440,260 390,240 340,260 340,210 320,210" fill="#d4ff00" opacity="0.9"/>
+  <polygon points="400,140 420,175 380,175" fill="#0a0a0a" opacity="0.3"/>
+  <!-- Wing accents -->
+  <polygon points="340,210 260,230 310,215" fill="#d4ff00" opacity="0.5"/>
+  <polygon points="460,210 540,230 490,215" fill="#d4ff00" opacity="0.5"/>
+  <!-- Deal tag -->
+  <rect x="340" y="295" width="120" height="26" fill="none" stroke="#d4ff00" stroke-width="2"/>
+  <text x="400" y="313" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="700" fill="#d4ff00" text-anchor="middle">AI-POWERED DEALS</text>
+  <!-- Label -->
+  <text x="400" y="370" font-family="'IBM Plex Mono', monospace" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">BIGFLIGHTDEALS</text>
+  <text x="400" y="400" font-family="'IBM Plex Mono', monospace" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle">AI-powered flight deal discovery for solo travelers.</text>
+</svg>

@@ -8,11 +8,13 @@ import Home from "./pages/Home";
 import UtmGenerator from "./pages/UtmGenerator";
 import JobUpdate from "./pages/JobUpdate";
 import Admin from "./pages/Admin";
+import WorkWithMe from "./pages/WorkWithMe";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/work-with-me"} component={WorkWithMe} />
       <Route path={"/utm-generator"} component={UtmGenerator} />
       <Route path={"/jobupdate"} component={JobUpdate} />
       <Route path={"/admin"} component={Admin} />

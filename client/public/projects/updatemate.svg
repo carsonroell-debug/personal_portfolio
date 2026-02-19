@@ -1,0 +1,26 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0a"/>
+  <defs>
+    <pattern id="grid-um" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-um)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#d4ff00"/>
+  <!-- Update arrows (circular) -->
+  <path d="M 400 150 A 80 80 0 0 1 470 230" fill="none" stroke="#d4ff00" stroke-width="6" stroke-linecap="square"/>
+  <path d="M 400 310 A 80 80 0 0 1 330 230" fill="none" stroke="#d4ff00" stroke-width="6" stroke-linecap="square"/>
+  <!-- Arrow heads -->
+  <polygon points="478,218 462,236 450,218" fill="#d4ff00"/>
+  <polygon points="322,242 338,224 350,242" fill="#d4ff00"/>
+  <!-- Center dot -->
+  <circle cx="400" cy="230" r="12" fill="#d4ff00"/>
+  <!-- Status dots to the right -->
+  <rect x="510" y="185" width="60" height="12" fill="#d4ff00" opacity="0.7"/>
+  <rect x="510" y="210" width="45" height="12" fill="rgba(255,255,255,0.2)"/>
+  <rect x="510" y="235" width="52" height="12" fill="#d4ff00" opacity="0.5"/>
+  <rect x="510" y="260" width="38" height="12" fill="rgba(255,255,255,0.2)"/>
+  <!-- Label -->
+  <text x="400" y="370" font-family="'IBM Plex Mono', monospace" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">UPDATEMATE</text>
+  <text x="400" y="400" font-family="'IBM Plex Mono', monospace" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle">Client job update portal for small service teams.</text>
+</svg>
