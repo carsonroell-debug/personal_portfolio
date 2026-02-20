@@ -10,6 +10,7 @@ import { ArrowDown, ExternalLink, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactFAB } from "@/components/ContactFAB";
 import { ContactForm } from "@/components/ContactForm";
+import { Header } from "@/components/Header";
 import { TechStackMarquee } from "@/components/TechStackMarquee";
 import { projects, tools } from "@/data/projects";
 
@@ -23,6 +24,7 @@ function scrollToSection(id: string) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Header />
       <ContactFAB />
 
       {/* ── Hero ── */}
@@ -58,7 +60,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black leading-none">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
                 I BUILD<br />
                 <span className="text-[var(--lime)]">SMALL APPS</span><br />
                 THAT SOLVE<br />
@@ -95,15 +97,97 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Visual */}
+            {/* Right: Terminal Mock Visual */}
             <div className="relative">
-              <div className="brutalist-border brutalist-shadow-lime bg-card p-8 aspect-square flex items-center justify-center">
-                <img
-                  src="/visuals/agent-ops-board.svg"
-                  alt="Atlas Ops Board — agent-native build dashboard"
-                  className="w-full h-full object-contain"
-                  fetchPriority="high"
-                />
+              <div className="brutalist-border brutalist-shadow-lime bg-[#0a0a0a] overflow-hidden">
+                {/* Title bar */}
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-[#d4ff00]/10">
+                  <div className="flex gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+                  </div>
+                  <span className="font-mono text-[10px] text-[#d4ff00]/50 ml-2 uppercase tracking-widest flex-1">
+                    atlas-ops-board — v1.4.2
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+                    </span>
+                    <span className="font-mono text-[10px] text-emerald-400">LIVE</span>
+                  </span>
+                </div>
+
+                {/* Body */}
+                <div className="p-5 space-y-5 font-mono">
+                  {/* Status block */}
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-[#d4ff00]/40 select-none">$</span>
+                      <span className="text-[#d4ff00]">atlas status --all</span>
+                    </div>
+                    <div className="pl-5 space-y-1 text-xs">
+                      <div className="grid grid-cols-[5.5rem_1fr]">
+                        <span className="text-white/30">ATLAS</span>
+                        <span className="text-emerald-400">● ACTIVE</span>
+                      </div>
+                      <div className="grid grid-cols-[5.5rem_1fr]">
+                        <span className="text-white/30">RUNNER</span>
+                        <span className="text-emerald-400">● ONLINE</span>
+                      </div>
+                      <div className="grid grid-cols-[5.5rem_1fr]">
+                        <span className="text-white/30">LAST CHECK</span>
+                        <span className="text-white/50">2m ago</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-white/5" />
+
+                  {/* Queue block */}
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-[#d4ff00]/40 select-none">$</span>
+                      <span className="text-[#d4ff00]">atlas queue --list</span>
+                    </div>
+                    <div className="pl-5 space-y-2 text-xs">
+                      <div className="flex items-center gap-2">
+                        <span className="text-white/25 shrink-0">[01]</span>
+                        <span className="text-white/80 truncate">Audit outbound links</span>
+                        <div className="ml-auto flex items-center gap-2 shrink-0">
+                          <div className="w-16 h-[3px] bg-white/10">
+                            <div className="h-full bg-[#d4ff00] w-[62%]" />
+                          </div>
+                          <span className="text-[#d4ff00]/60 text-[10px]">62%</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-white/25 shrink-0">[02]</span>
+                        <span className="text-white/40 truncate">Generate thumbnails</span>
+                        <span className="ml-auto text-white/20 text-[10px] shrink-0">queued</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-white/25 shrink-0">[03]</span>
+                        <span className="text-white/40 truncate">Verify deployments</span>
+                        <span className="ml-auto text-white/20 text-[10px] shrink-0">queued</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-white/25 shrink-0">[04]</span>
+                        <span className="text-white/40 truncate">Open PR: homepage</span>
+                        <span className="ml-auto text-white/20 text-[10px] shrink-0">queued</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-white/5" />
+
+                  {/* Blinking cursor */}
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-[#d4ff00]/40 select-none">$</span>
+                    <span className="inline-block w-2 h-[1em] bg-[#d4ff00]/70 animate-pulse" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -228,7 +312,7 @@ export default function Home() {
       </section>
 
       {/* ── Free Tools ── */}
-      <section className="py-32 border-t-4 border-white bg-muted/10">
+      <section id="tools" className="py-32 border-t-4 border-white bg-muted/10">
         <div className="container">
           <div className="mb-12">
             <h2 className="text-5xl sm:text-6xl font-black leading-none mb-4">
