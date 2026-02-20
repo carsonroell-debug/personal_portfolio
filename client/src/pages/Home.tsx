@@ -45,19 +45,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left: Bold Statement */}
             <div className="space-y-8">
-              <div className="space-y-3">
-                <div className="inline-block brutalist-border bg-[var(--lime)] px-6 py-3">
-                  <span className="font-mono text-sm font-semibold text-black uppercase tracking-wider">
-                    CarsonLabs HQ
-                  </span>
-                </div>
-
-                <div className="font-mono text-sm text-muted-foreground">
-                  <span className="text-[var(--lime)] font-semibold">
-                    Recent launches:
-                  </span>{" "}
-                  LinkRescue • BigFlightDeals • TravelPackAI • UpdateMate
-                </div>
+              <div className="inline-block brutalist-border bg-[var(--lime)] px-6 py-3">
+                <span className="font-mono text-sm font-semibold text-black uppercase tracking-wider">
+                  CarsonLabs HQ
+                </span>
               </div>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
